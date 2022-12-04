@@ -19,6 +19,7 @@ const mockButton = document.getElementById('inserir-mock');
 const editInTable = document.getElementById('editar-em-tabela');
 
 let tableTasks = [];
+let allTasks = [];
 let toBeEdited;
 
 let hasName = false;
