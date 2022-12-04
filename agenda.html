@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <header>
+        <h1>Minha Lista de Tarefas</h1>
+        <p id='funcionamento'>Clique em um item para selecioná-lo e depois clique em completar selecionado para marcá-lo como completo.</p>
+        <br>
+        <p>Para editar, selecione um item e clique em editar selecionado. Edite as informações na caixa nome e descrição e clique em confirmar edição quando estiver pronto.</p>
+        <p>Para inserir dados de teste, clique no botão TESTE COM DADOS. Ele fará a inserção de dados do arquivo mockData.js, da pasta raiz. PARA VER ESSES DADOS, RECARREGUE A PÁGINA</p>
+        <br>
+        <button id="structure-button">Clique para ver a estrutura JSON utilizada</button>
+        <strong id="structure" style="display:none"> 
+            Estrutura utilizada:
+                {
+                tarefas: [
+                {
+                id: 0,
+                nome: 'Aniversário',
+                info: 'Niver',
+                date: '2022-12-18T18:32',
+                reminder: '2022-12-22T18:32',
+                done: 0,
+                place: 'Casa da Ju',
+                },
+                {
+                id: 1,
+                nome: 'Reunião',
+                info: 'Reunião com a turma',
+                date: '2022-12-18T18:32',
+                reminder: '2022-12-22T18:32',
+                done: 0,
+                place: 'Casa da Ju',
+                },
+                {
+                id: 2,
+                nome: 'Festa de fim de ano',
+                info: 'Rua python 235',
+                date: '2022-12-18T18:32',
+                reminder: '2022-12-22T18:32',
+                done: 0,
+                place: 'Casa da Ju',
+                },
+                {
+                id: 3,
+                nome: 'Entregar relatorio',
+                info: 'Até 23:20',
+                date: '2022-12-18T18:32',
+                reminder: '2022-12-22T18:32',
+                done: 1,
+                place: 'Escritório',
+                },
+                ],
+                };
+        </strong>
+        <br><br>
+        <label for="texto-tarefa">Nome: </label>
+        <input id='texto-tarefa' type='text' name="texto-tarefa">
+        <br><br>
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" rows="4" cols="50"></textarea>
+        <br><br>
+        <label for="prazo">Prazo:</label>
+        <input type="datetime-local" name="prazo" id="prazo">
+        <br><br>
+        <label for="lembrete">Lembrete:</label>
+        <input type="datetime-local" name="lembrete" id="lembrete">
+        <br><br>
+        <label for="local">Local:</label>
+        <input type="text" name="local" id="local">
+        <br><br>
+        <button id='criar-tarefa' disabled >Criar tarefa</button>
+        <button id='apaga-tudo'>Apagar tudo</button>
+        <button id='remover-finalizados'>Remover concluídos</button>
+        <button id='completar-selecionado'>Completar selecionado</button>
+        <button id='editar-selecionado' disabled>Editar selecionado</button>
+        <button id='confirmar-edicao' disabled style="display: none;">Confirmar edicao</button>
+        <button id="editar-em-tabela">Confirmar edicao em tabela</button>
+        <button id='inserir-mock'>TESTE COM DADOS</button>
+    </header>
+    <main>
+        <dl id='lista-tarefas'></dl>
+        <table id='task-table'>
+            <tr class="head">
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Prazo</th>
+                <th>Lembrete</th>
+                <th>Local</th>
+                <th>Concluído</th>
+            </tr>
+        </table>
+    </main>
+    <script src="script.js" type="module"></script>
+</body>
+</html>

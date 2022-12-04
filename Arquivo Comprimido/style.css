@@ -1,0 +1,7 @@
+#lista-tarefas {
+  max-width: 300px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
