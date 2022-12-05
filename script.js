@@ -298,6 +298,7 @@ function completeCurrentSelected(e) {
       changeInLocalStorage(index);
     }
   }
+  location.reload()
 }
 
 function changeInLocalStorage(id) {
